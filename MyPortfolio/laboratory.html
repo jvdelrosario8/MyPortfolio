@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory - My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Joseph</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="quiz.html" >Quiz</a>
+            <a href="laboratory.html" class="active">Laboratory</a>
+            <a href="exam.html" >Exam</a>
+        </nav>
+    </header>
+
+    <section class="page-section">
+        <div class="page-header">
+            <h2>Laboratory <span>Scores</span></h2>
+            <p>Upload your laboratory score files. Click a card to view it fullscreen.</p>
+        </div>
+
+        <div class="files-grid" id="filesGrid"></div>
+
+        <div class="upload-area" id="uploadArea">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <p>Click to upload or drag & drop</p>
+            <span>PNG, JPG, JPEG supported</span>
+        </div>
+        <input type="file" id="fileInput" accept="image/*" multiple hidden>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox hidden" id="lightbox">
+        <div class="lightbox-inner">
+            <button class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></button>
+            <img id="lightboxImg" src="" alt="Preview">
+            <p id="lightbox-label"></p>
+        </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal-overlay hidden" id="deleteModal">
+        <div class="modal-box">
+            <p>Remove this file?</p>
+            <div class="modal-actions">
+                <button class="btn-cancel" id="cancelDelete">Cancel</button>
+                <button class="btn-delete" id="confirmDelete">Remove</button>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
